@@ -6,7 +6,7 @@
 /*   By: tpayen <tpayen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/09 09:57:15 by tpayen            #+#    #+#             */
-/*   Updated: 2015/01/15 17:30:30 by tpayen           ###   ########.fr       */
+/*   Updated: 2015/01/23 13:54:47 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,7 @@ char	*ft_strdup(const char *s1)
 
 	i = 0;
 	if (!(ret = ft_strnew(ft_strlen(s1) + 1)))
-	{
-		errno = ENOMEM;
 		return (NULL);
-	}
 	while (s1[i])
 	{
 		ret[i] = s1[i];

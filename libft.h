@@ -6,7 +6,7 @@
 /*   By: tpayen <tpayen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/09 07:51:47 by tpayen            #+#    #+#             */
-/*   Updated: 2015/01/21 19:16:11 by tpayen           ###   ########.fr       */
+/*   Updated: 2015/01/23 13:53:57 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 # define LIBFT_H
 
 # include <unistd.h>
-# include <errno.h>
 # include <stdlib.h>
+# include <string.h>
 
 struct	s_list
 {
