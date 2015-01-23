@@ -77,6 +77,7 @@ SRCFILES_MY_BONUS =	ft_isupper.c	\
 					ft_intlen.c		\
 					ft_realloc.c	\
 					ft_lstpush.c	\
+					ft_swap.c		\
 
 SRCFILES = $(SRCFILES_PART1) $(SRCFILES_PART2) $(SRCFILES_BONUS) $(SRCFILES_MY_BONUS)
 
