@@ -6,7 +6,7 @@
 /*   By: tpayen <tpayen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/09 07:51:47 by tpayen            #+#    #+#             */
-/*   Updated: 2015/01/23 14:19:52 by tpayen           ###   ########.fr       */
+/*   Updated: 2015/01/23 15:12:14 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,6 @@ int		ft_isspace(int c);
 size_t	ft_intlen(int n);
 void	*ft_realloc(void *ptr, size_t old_size, size_t size);
 void	ft_lstpush(t_list **alst, t_list *new);
-int		ft_swap(void **a, void **b);
+int		ft_strswap(char **a, char **b);
 
 #endif
