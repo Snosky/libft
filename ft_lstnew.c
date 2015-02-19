@@ -6,7 +6,7 @@
 /*   By: tpayen <tpayen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/15 18:16:44 by tpayen            #+#    #+#             */
-/*   Updated: 2015/01/21 19:32:37 by tpayen           ###   ########.fr       */
+/*   Updated: 2015/02/19 19:08:44 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		if (!(ret->content = (t_list *)malloc(sizeof(content_size + 1))))
+		if (!(ret->content = (void *)malloc(sizeof(content_size + 1))))
 			return (NULL);
 		ret->content = ft_memcpy(ret->content, content, content_size);
 	}
