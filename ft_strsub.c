@@ -6,7 +6,7 @@
 /*   By: tpayen <tpayen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/15 16:55:58 by tpayen            #+#    #+#             */
-/*   Updated: 2015/01/20 16:24:59 by tpayen           ###   ########.fr       */
+/*   Updated: 2015/02/26 17:43:06 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if ((start + len) > ft_strlen(s))
 		return (NULL);
-	if (!(ret = ft_strnew(len + 1)))
+	if (!(ret = ft_strnew(len)))
 		return (NULL);
 	while (len--)
 	{
