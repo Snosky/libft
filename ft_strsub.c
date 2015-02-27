@@ -6,7 +6,7 @@
 /*   By: tpayen <tpayen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/15 16:55:58 by tpayen            #+#    #+#             */
-/*   Updated: 2015/02/26 17:43:06 by tpayen           ###   ########.fr       */
+/*   Updated: 2015/02/27 19:53:56 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 		start++;
 		i++;
 	}
+	ret[i] = 0;
 	return (ret);
 }
