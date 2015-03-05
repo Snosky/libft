@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_bcopy.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpayen <tpayen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/01/09 09:57:15 by tpayen            #+#    #+#             */
-/*   Updated: 2015/03/05 14:56:00 by tpayen           ###   ########.fr       */
+/*   Created: 2015/03/05 14:42:13 by tpayen            #+#    #+#             */
+/*   Updated: 2015/03/05 14:57:16 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void	ft_bcopy(char *src, char *dest, int len)
 {
-	size_t	len;
-	char	*copy;
+	char	*lasts;
+	char	*lastd;
 
-	len = ft_strlen(s1) + 1;
-	if (!(copy = malloc(len)))
-		return (NULL);
-	ft_bcopy((char *)s1, copy, len);
-	return (copy);
+	if (dest < src)
+		while (len--)
+			*dest++ = *src++;
+	else
+	{
+		lasts = src + (len - 1);
+		lastd = dest + (len - 1);
+		while (len--)
+			*(char *)lastd-- = *(char *)lasts--;
+	}
 }
