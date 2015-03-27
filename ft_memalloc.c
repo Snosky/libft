@@ -6,7 +6,7 @@
 /*   By: tpayen <tpayen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/14 17:34:44 by tpayen            #+#    #+#             */
-/*   Updated: 2015/01/15 17:31:59 by tpayen           ###   ########.fr       */
+/*   Updated: 2015/03/27 08:42:09 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 void	*ft_memalloc(size_t size)
 {
 	char	*ret;
+	int	i;
 
-	if (!(ret = (char *)malloc(size)))
+	i = 0;
+	if (!(ret = (char *)malloc(sizeof(char) * size)))
 		return (NULL);
 	while (size--)
 	{
-		*ret = 0;
-		ret++;
+		ret[i] = 0;
+		i++;
 	}
 	return (ret);
 }

@@ -6,7 +6,7 @@
 #*   By: tpayen <tpayen@student.42.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2015/01/09 07:38:16 by tpayen            #+#    #+#             *#
-#*   Updated: 2015/01/09 12:05:21 by tpayen           ###   ########.fr       *#
+#*   Updated: 2015/03/16 08:46:09 by tpayen           ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -82,24 +82,27 @@ SRCFILES_MY_BONUS =	ft_isupper.c	\
 
 SRCFILES = $(SRCFILES_PART1) $(SRCFILES_PART2) $(SRCFILES_BONUS) $(SRCFILES_MY_BONUS)
 
-OBJ = $(SRCFILES:.c=.o)
+SRC_OBJ = $(SRCFILES:.c=.o)
 
-CC = gcc
+CC = clang
 FLAGS = -Wextra -Werror -Wall
 
 NAME = libft.a
 
 all: $(NAME)
 
-$(NAME):
-	@$(CC) $(FLAGS) -c $(SRCFILES)
-	@ar rc $(NAME) $(OBJ)
-	@make clean
+$(NAME): $(SRC_OBJ)
+	ar rc $@ $^
+
+%.o: %.c
+	$(CC) -o $@ -c $< $(FLAGS)
+
+.PHONY: clean fclean re
 
 clean:
-	@rm -f $(OBJ)
+	rm -f $(SRC_OBJ)
 
 fclean: clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean $(NAME)
