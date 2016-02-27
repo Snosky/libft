@@ -6,7 +6,7 @@
 /*   By: tpayen <tpayen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/14 16:18:45 by tpayen            #+#    #+#             */
-/*   Updated: 2015/01/21 18:12:49 by tpayen           ###   ########.fr       */
+/*   Updated: 2016/02/27 16:37:49 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,3 +39,26 @@ int		ft_atoi(const char *str)
 		ret *= -1;
 	return (ret);
 }
+/*
+int		ft_atoi(const char *str)
+{
+	int		ret;
+	char	c;
+
+	ret = 0;
+	c = 1;
+	while (*str == ' ' || *str == '\t' || *str == '\r' || *str == '\v'
+			|| *str == '\n' || *str == '\f')
+		str++;
+	if (*str == '-' || *str == '+')
+	{
+		c = (*str == '-' ? -1 : 1);
+		str++;
+	}
+	while (ft_isdigit(*str))
+	{
+		ret = ret  * 10 + c * (*str - '0');
+		str++;
+	}
+	return (ret);
+}*/
