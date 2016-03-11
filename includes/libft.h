@@ -6,7 +6,7 @@
 /*   By: tpayen <tpayen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/09 07:51:47 by tpayen            #+#    #+#             */
-/*   Updated: 2015/03/05 14:55:02 by tpayen           ###   ########.fr       */
+/*   Updated: 2016/03/12 00:11:12 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+int		ft_lstcount(t_list *lst);
 
 int		ft_isupper(int c);
 int		ft_islower(int c);

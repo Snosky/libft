@@ -6,7 +6,7 @@
 #*   By: tpayen <tpayen@student.42.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2015/01/09 07:38:16 by tpayen            #+#    #+#             *#
-#*   Updated: 2015/03/16 08:46:09 by tpayen           ###   ########.fr       *#
+#*   Updated: 2016/03/12 00:11:30 by tpayen           ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -72,6 +72,7 @@ SRCFILES_BONUS =	ft_lstnew.c		\
 					ft_lstadd.c		\
 					ft_lstiter.c	\
 					ft_lstmap.c		\
+					ft_lstcount.c	\
 
 SRCFILES_MY_BONUS =	ft_isupper.c	\
 					ft_islower.c 	\
