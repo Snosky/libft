@@ -6,7 +6,7 @@
 #*   By: tpayen <tpayen@student.42.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2015/01/09 07:38:16 by tpayen            #+#    #+#             *#
-#*   Updated: 2016/03/12 00:11:30 by tpayen           ###   ########.fr       *#
+#*   Updated: 2016/03/12 17:19:33 by tpayen           ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -40,6 +40,7 @@ SRCFILES_PART1 =	ft_memset.c		\
 					ft_isprint.c	\
 					ft_toupper.c	\
 					ft_tolower.c	\
+					ft_strreplace.c	\
 
 SRCFILES_PART2 =	ft_memalloc.c	\
 					ft_memdel.c		\
@@ -56,6 +57,7 @@ SRCFILES_PART2 =	ft_memalloc.c	\
 					ft_strjoin.c	\
 					ft_strtrim.c	\
 					ft_strsplit.c	\
+					ft_strimp.c		\
 					ft_itoa.c		\
 					ft_putchar.c	\
 					ft_putstr.c		\
