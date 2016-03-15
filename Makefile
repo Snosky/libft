@@ -6,7 +6,7 @@
 #*   By: tpayen <tpayen@student.42.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2015/01/09 07:38:16 by tpayen            #+#    #+#             *#
-#*   Updated: 2016/03/12 17:19:33 by tpayen           ###   ########.fr       *#
+#*   Updated: 2016/03/15 17:22:41 by tpayen           ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -84,6 +84,7 @@ SRCFILES_MY_BONUS =	ft_isupper.c	\
 					ft_lstpush.c	\
 					ft_strswap.c	\
 					ft_bcopy.c		\
+					ft_tablen.c		\
 
 GET_NEXT_LINE	= get_next_line.c
 
