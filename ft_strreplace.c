@@ -6,7 +6,7 @@
 /*   By: tpayen <tpayen@studio.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/12 17:14:05 by tpayen            #+#    #+#             */
-/*   Updated: 2016/03/12 17:24:53 by tpayen           ###   ########.fr       */
+/*   Updated: 2016/03/15 14:36:45 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,5 @@ char	*ft_strreplace(char *search, char *replace, char *s)
 	ret = ft_strdup(s);
 	ret = ft_strjoin(ret, replace);
 	ret = ft_strjoin(ret, str + ft_strlen(search));
-	ft_putstr(ret);
 	return (ret);
 }
