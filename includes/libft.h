@@ -6,7 +6,7 @@
 /*   By: tpayen <tpayen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/09 07:51:47 by tpayen            #+#    #+#             */
-/*   Updated: 2016/03/15 17:22:27 by tpayen           ###   ########.fr       */
+/*   Updated: 2016/03/22 13:17:12 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-char	*ft_strreplace(char *search, char *replace, char *s);
+char	*ft_strreplace(char *search, char *replace, char *s, int rec);
 
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);

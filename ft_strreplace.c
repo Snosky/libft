@@ -6,13 +6,13 @@
 /*   By: tpayen <tpayen@studio.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/12 17:14:05 by tpayen            #+#    #+#             */
-/*   Updated: 2016/03/18 18:31:51 by tpayen           ###   ########.fr       */
+/*   Updated: 2016/03/22 13:19:27 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-char	*ft_strreplace(char *search, char *replace, char *s)
+char	*ft_strreplace(char *search, char *replace, char *s, int rec)
 {
 	char	*ret;
 	char	*str;
@@ -26,7 +26,7 @@ char	*ft_strreplace(char *search, char *replace, char *s)
 	ret = ft_strdup(tmp);
 	ret = ft_strjoin(ret, replace);
 	ret = ft_strjoin(ret, str + ft_strlen(search));
-	if (ft_strstr(ret, search))
-		ret = ft_strreplace(search, replace, ret);
+	if (ft_strstr(ret, search) && rec)
+		ret = ft_strreplace(search, replace, ret, 1);
 	return (ret);
 }
