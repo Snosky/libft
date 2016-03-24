@@ -6,7 +6,7 @@
 #*   By: tpayen <tpayen@student.42.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2015/01/09 07:38:16 by tpayen            #+#    #+#             *#
-#*   Updated: 2016/03/24 21:20:25 by tpayen           ###   ########.fr       *#
+#*   Updated: 2016/03/24 21:39:28 by tpayen           ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -109,15 +109,15 @@ all: directories $(NAME)
 
 $(NAME):
 ifeq ($(DEBUG), no)
-	echo "\\033[1;34m--- $(NAME) compilation ---\\033[39m"
+	@echo "\\033[1;34m--- $(NAME) compilation ---\\033[39m"
 else
-	echo "\\033[1;34m--- $(NAME) debug compilation ---\\033[39m"
+	@echo "\\033[1;34m--- $(NAME) debug compilation ---\\033[39m"
 endif
-	echo -n "\\033[1;35mObjects compilation : \\033[0;39"
+	@echo -n "\\033[1;35mObjects compilation : \\033[0;39"
 	$(MAKE) $(OBJS)
-	echo "\n\\033[1;35mFinal compilation\\033[0;39m"
+	@echo "\n\\033[1;35mFinal compilation\\033[0;39m"
 	ar rc $@ $(OBJS)
-	echo "\\033[1;34m--- $(NAME) compilation done ---\\033[39m"
+	@echo "\\033[1;34m--- $(NAME) compilation done ---\\033[39m"
 
 $(OBJDIR)%.o: $(SRCSDIR)%.c
 	echo -n "\\033[1;32m.\\033[0;39m"
