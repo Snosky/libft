@@ -6,7 +6,7 @@
 #*   By: tpayen <tpayen@student.42.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2015/01/09 07:38:16 by tpayen            #+#    #+#             *#
-#*   Updated: 2016/03/24 21:52:43 by tpayen           ###   ########.fr       *#
+#*   Updated: 2016/03/25 14:56:09 by tpayen           ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -129,7 +129,7 @@ re: fclean all
 
 clean:
 	rm -rf $(OBJDIR)
-	echo "\\033[32m--- Objects form $(NAME) deleted ---\\033[0;39m"
+	echo "\\033[32m--- Objects from $(NAME) deleted ---\\033[0;39m"
 
 fclean: clean
 	rm -f $(NAME)
