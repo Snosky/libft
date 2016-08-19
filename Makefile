@@ -113,7 +113,7 @@ ifeq ($(DEBUG), no)
 else
 	@echo "\\033[1;34m--- $(NAME) debug compilation ---\\033[39m"
 endif
-	@echo -n "\\033[1;35mObjects compilation : \\033[0;39"
+	@echo -n "\\033[1;35mObjects compilation : \\033[0;39m"
 	$(MAKE) $(OBJS)
 	@echo "\n\\033[1;35mFinal compilation\\033[0;39m"
 	ar rc $@ $(OBJS)
