@@ -6,7 +6,7 @@
 /*   By: tpayen <tpayen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/09 07:51:47 by tpayen            #+#    #+#             */
-/*   Updated: 2016/03/22 13:17:12 by tpayen           ###   ########.fr       */
+/*   Updated: 2016/11/25 17:19:08 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,16 @@ struct	s_list
 	size_t			content_size;
 	struct s_list	*next;
 };
-typedef struct s_list	t_list;
+typedef struct s_list		t_list;
+
+struct	s_lstd
+{
+	void			*content;
+	size_t			content_size;
+	struct s_lstd	*next;
+	struct s_lstd	*prev;
+};
+typedef struct s_lstd		t_lstd;
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
@@ -99,5 +108,8 @@ int		ft_strswap(char **a, char **b);
 void	ft_bcopy(register char *scr, register char *dest, int len);
 
 int		ft_tablen(char **tab);
+
+t_lstd	*ft_lstdnew(void const *content, size_t content_size);
+void	ft_lstdadd(t_lstd **alst, t_lstd *new);
 
 #endif
