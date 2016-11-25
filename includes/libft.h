@@ -6,7 +6,7 @@
 /*   By: tpayen <tpayen@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/09 07:51:47 by tpayen            #+#    #+#             */
-/*   Updated: 2016/11/25 17:19:08 by tpayen           ###   ########.fr       */
+/*   Updated: 2016/11/25 19:18:15 by tpayen           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,5 +111,6 @@ int		ft_tablen(char **tab);
 
 t_lstd	*ft_lstdnew(void const *content, size_t content_size);
 void	ft_lstdadd(t_lstd **alst, t_lstd *new);
+void	ft_lstddelone(t_lstd **alst, void (del)(void *, size_t size));
 
 #endif

@@ -97,6 +97,7 @@ SRCS =	ft_memset.c		\
 		get_next_line.c \
 		ft_lstdnew.c	\
 		ft_lstdadd.c	\
+		ft_lstddelone.c \
 
 INCLUDES = -Iincludes
 
