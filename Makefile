@@ -13,7 +13,7 @@
 NAME = libft.a
 CC = clang
 
-DEBUG = no
+DEBUG = y
 
 ifeq ($(DEBUG), no)
 FLAGS = -Wall -Werror -Wextra
@@ -94,7 +94,9 @@ SRCS =	ft_memset.c		\
 		ft_strswap.c	\
 		ft_bcopy.c		\
 		ft_tablen.c		\
-		get_next_line.c
+		get_next_line.c \
+		ft_lstdnew.c	\
+		ft_lstdadd.c	\
 
 INCLUDES = -Iincludes
 
