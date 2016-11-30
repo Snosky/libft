@@ -10,16 +10,10 @@
 #*                                                                            *#
 #* ************************************************************************** *#
 
-NAME = libft.a
+EXEC = libft.a
 CC = clang
 
-DEBUG = y
-
-ifeq ($(DEBUG), no)
 FLAGS = -Wall -Werror -Wextra
-else
-FLAGS = -g
-endif
 
 SRCSDIR = ./
 OBJDIR = obj/
@@ -106,39 +100,25 @@ OBJS = $(SRCS:%.c=$(OBJDIR)%.o);
 #** Directory to create **#
 DIRS = $(OBJDIR)
 
-.SILENT:
+all: directories $(EXEC)
 
-all: directories $(NAME)
-
-$(NAME):
-ifeq ($(DEBUG), no)
-	@echo "\\033[1;34m--- $(NAME) compilation ---\\033[39m"
-else
-	@echo "\\033[1;34m--- $(NAME) debug compilation ---\\033[39m"
-endif
-	@echo -n "\\033[1;35mObjects compilation : \\033[0;39m"
-	$(MAKE) $(OBJS)
-	@echo "\n\\033[1;35mFinal compilation\\033[0;39m"
+$(EXEC): $(OBJS)
 	ar rc $@ $(OBJS)
-	@echo "\\033[1;34m--- $(NAME) compilation done ---\\033[39m"
 
-$(OBJDIR)%.o: $(SRCSDIR)%.c
-	echo -n "\\033[1;32m.\\033[0;39m"
-	$(CC) -o $@ -c $< $(FLAGS) $(INCLUDES)
+$(OBJDIR)%.o: $(SRCDIR)%.c
+	$(CC) -o $@ -c $< $(CFLAGS) $(INCLUDES)
 
-.PHONY: directories clean fclean
+.PHONY: directories re clean fclean
 
 re: fclean all
 
 clean:
-	rm -rf $(OBJDIR)
-	echo "\\033[32m--- Objects from $(NAME) deleted ---\\033[0;39m"
+	rm -rf $(DIRS)
 
 fclean: clean
-	rm -f $(NAME)
-	echo "\\033[32m--- $(NAME) deleted ---\\033[0;39m"
+	rm -rf $(EXEC)
 
 directories: $(DIRS)
 
 $(DIRS):
-	mkdir -p $@
+	mkdir $@
